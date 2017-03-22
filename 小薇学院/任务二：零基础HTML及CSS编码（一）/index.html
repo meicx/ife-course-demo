@@ -3,53 +3,185 @@
 	<head>
 		<meta charset='utf-8'>
 		<style type="text/css">
+		body,h1,ul{
+			margin:0;
+		}
+		body{
+			background-color: #CCC;
+		}
+		body > div{
+			padding:20px;
+			background-color: white;
+			margin: 20px;
+			border-right:3px solid grey;
+			border-bottom:3px solid grey;
+		}
+		header{
+			background-color: #333;
+			color: white;
+			height: 60px;
+		}
 		h1,h2,h3{
 			font-weight: bold;
 		}
-		table,table td{
-			border:1px solid grey;
+		h1{
+			margin-left: 20px;
+			line-height: 60px;
+			float:left;
 		}
+		ul{
+			text-indent: 0;
+			list-style: none;
+		}
+		ul.menu{
+			position:relative;
+			right:20px;
+			line-height: 60px;
+		}
+		.menu li{
+			float: left;
+			width:100px;	
+		}
+		.menu li a{
+			color:#fff;
+			text-decoration: none;
+		}	
+		h3,p{
+			color:grey;
+		}
+		.indent-page{
+			text-indent: 2em;
+		}
+		.text-right{
+			float:right;
+		}
+		
 		.img-left{
 			margin-left: 30px;
 		}
+		
+		#table1{
+			width:100%;
+			display: inline-table;
+			border-collapse:collapse;
+		}
+		#table1 td{
+			border:1px solid #CCC;
+			
+		}
+		#table1 tr{
+			height: 1.5em;
+		}
+		#table1 tr:first-child{
+			background:#333;
+			color:white;
+		}
+		#table1 tr:last-child{
+			background:#CCC;
+			color:black;
+		}
+		.img-item{
+			padding:10px;
+			margin-bottom: 20px;
+			border:1px solid #CCC;
+			width:100px;
+			text-align: center;
+		}
+		.img-item p{
+			width:100%;
+			margin:0 auto;
+		}
 		.img-item img{
-			width:10%;
+			width:100%;
+		}
+
+		#section2 li{
+			line-height: 30px;
+		}
+
+		#section4 li{
+			line-height: 30px;
+			font-weight: bold;
+		}
+		.form-content{
+    		text-align: center;
+   			width: 100%;
+		}
+		.form-control{
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+		.col-4{
+			float: left;
+			width:40%;
+		}
+		.col-6{
+			float: left;
+			
+			width:60%;
+		}
+		.pull-right{
+			text-align: right;
+		}
+		.pull-left{
+			text-align: left;
+		}
+		.submit{
+			width:100%;
+			border-radius: 8px;
+			border:none;
+			padding: 10px;
+			background-color: #6495ED;
+		}
+		.footer{
+			margin:0;
+			border:0;
+			background-color: black;
+			color: white;
+			text-align: center;
 		}
 		</style>
 	</head>
 	<body>
-		<h1>网站一级标题</h1>
-		<ul>
-			<li><a href="#">导航链接一</a></li>
-			<li><a href="#">导航链接二</a></li>
-			<li><a href="#">导航链接三</a></li>
-			<li><a href="#">导航链接四</a></li>
-		</ul>
-		<h2>文章一级标题</h2>
-		<h3>文章二级标题</h3>
-		<p><span>文章作者</span>&nbsp;<span>文章发表时间</span></p>
-		<section>
-		<div>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
-		换行了</br>
-		这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落</div>
-		<img src="../pikapika.jpg" width="30%"/>
-		<div>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+		<header>
+			<h1 class="text-left">百度前端技术学院</h1>
+			<ul class="menu text-right">
+				<li><a href="#">导航链接一</a></li>
+				<li><a href="#">导航链接二</a></li>
+				<li><a href="#">导航链接三</a></li>
+				<li><a href="#">导航链接四</a></li>
+			</ul>
+		</header>
+		<div id="section1">
+			<h2>文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p><span>文章作者</span>&nbsp;<span>文章发表时间</span></p>
+			<section>
+			<div class="indent-page">这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+			换行了</br>
+			这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落</div>
+			<img src="../pikapika.jpg" width="20%"/>
+			<div>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+			</div>
+			</section>
 		</div>
-		<div>
+		<div id="section2">
 			<h2>另一篇文章一级标题</h2>
 			<h3>文章二级标题</h3>
 			<p><span>文章作者</span>&nbsp;<span>文章发表时间</span></p>
 			<section>
-			<div>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了</br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落</div>
-			<img src="../pikapika.jpg"  width="30%"/>
-			<ul>
-				<li>列表项目一</li>
-				<li>列表项目二</li>
-				<li>列表项目三</li>
-			</ul>
-			<div>
-				<h2>图片</h2>
-				<section>
+				<div class="indent-page">这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了</br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落</div>
+				<img src="../pikapika.jpg"  width="20%"/>
+				<ul>
+					<li>列表项目一</li>
+					<li>列表项目二</li>
+					<li>列表项目三</li>
+				</ul>
+			</section>
+		</div>
+		<div  id="section3">
+			<h2>图片</h2>
+			<section>
 					<div class="img-left">
 						<div class="img-item">
 							<p>好看的图片</p>
@@ -92,18 +224,18 @@
 							<img src="../pikapika.jpg"/>
 						</div>
 					</div>
-				</section>
-			</div>
+			</section>
+		</div>
+		<div  id="section4">
+			<h2>最后一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p><span>文章作者</span>&nbsp;<span>文章发表时间</span></p>
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
 			<div>
-				<h2>最后一篇文章一级标题</h2>
-				<h3>文章二级标题</h3>
-				<p><span>文章作者</span>&nbsp;<span>文章发表时间</span></p>
-				<ol>
-					<li>排名1</li>
-					<li>排名2</li>
-					<li>排名3</li>
-				</ol>
-				<div>
 					<div>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格</div>
 					<table id="table1">
 						<tr>
@@ -136,44 +268,68 @@
 							<td colspan="2">1000</td>	
 						</tr>
 					</table>
-				</div>
-				<div class="side">
+			</div>
+		</div>
+		<div id="section5" class="side">
 					<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-					<h3>侧栏注册窗口标题</h3>
-					<form action="/">
-						<div>
-							<span>请输入邮箱地址：</span><input type="text" placeholder="这是一个文本输入框" />
-						
-							<p>邮箱地址请安要求格式输入</p>
-						
+					<form action="/" class="form-content">
+						<div class="form-control col-4 pull-right">
+							<span>请输入邮箱地址：</span>
 						</div>
-						<div>
-							<span>请输入密码：</span><input type="text" placeholder="这是一个文本输入框" />
-							<span>请重复输入密码：</span><input type="text" placeholder="这是一个文本输入框" />
+						<div class="form-control col-6 pull-left">
+							<input type="text" placeholder="这是一个文本输入框" />
+							<p>邮箱地址请安要求格式输入</p>
+						</div>
+						<div class="form-control col-4 pull-right">
+							<span>请输入密码：</span>
+						</div>
+						<div class="form-control col-6 pull-left">
+							<input type="text" placeholder="这是一个文本输入框" />
+						</div>
+						<div  class="form-control col-4 pull-right">
+							<span>请重复输入密码：</span>
+						</div>
+						<div  class="form-control col-6 pull-left">
+							<input type="text" placeholder="这是一个文本输入框" />
 							<p>密码请为6-16位英文数字</p>
 						</div>
-						<div>
+						<div class="form-control col-4 pull-right">
 							<span>性别：</span>
+						</div>
+						<div  class="form-control col-6 pull-left">
 							<input type="radio" value="1" checked /><label>男</label>
 							<input type="radio" value="2"/><label>女</label>
+						</div>
+						<div class="form-control col-4 pull-right">
 							<span>城市：</span>
+						</div>
+						<div  class="form-control col-6 pull-left">
 							<select>
 								<option value="1">北京</option>
 								<option value="2">上海</option>
 							</select>
+						</div>
+						<div class="form-control col-4 pull-right">
 							<span>爱好：</span>
+						</div>
+						<div  class="form-control col-6 pull-left">
 							<input type="checkbox" name="favorite"/><label>运动</label>
 							<input type="checkbox" name="favorite"/><label>艺术</label>
 							<input type="checkbox" name="favorite"/><label>科学</label>
-							<span>个人描述</span>
+						</div>
+					
+						<div class="form-control col-4 pull-right">
+							<span>个人描述: </span>
+						</div>
+						<div  class="form-control col-6 pull-left">
 							<textarea placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
-							<input type="submit" value="确认"/>
+						</div>
+						<div>
+							<input class="submit" type="submit" value="确认"/>
 						</div>
 					</form>
-				</div>
-				<div>版权所有©</div>
-			</div>
 		</div>
-
+		<div class="footer">版权所有©</div>
+		</div>
 	</body>
 </html>
